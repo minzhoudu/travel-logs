@@ -6,7 +6,8 @@
     </h1>
 
     <button class="btn btn-secondary">
-      Click me
+      View Map
+      <Icon name="tabler:map" size="20" />
     </button>
   </div>
 </template>
