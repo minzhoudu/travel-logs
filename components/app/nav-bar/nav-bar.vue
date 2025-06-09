@@ -6,7 +6,9 @@
       </NuxtLink>
     </div>
 
-    <div class="navbar-end">
+    <div class="navbar-end gap-4">
+      <AppColorMode />
+
       <AppSignInButton />
     </div>
   </div>
