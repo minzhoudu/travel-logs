@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const authStore = useAuthStore();
+</script>
+
 <template>
   <div class="navbar bg-primary text-primary-content">
     <div class="navbar-start">
@@ -9,7 +13,23 @@
     <div class="navbar-end gap-4">
       <AppColorMode />
 
-      <AppSignInButton />
+      <AppSignInButton v-if="authStore.loading || !authStore.user" label="Sign In with GitHub" />
+
+      <AppDropdown v-else>
+        <template #placeholder>
+          <AppUserAvatar v-if="authStore.user.image" :src="authStore.user.image" :alt="authStore.user.name" />
+          {{ authStore.user?.name }}
+        </template>
+
+        <template #default>
+          <li>
+            <a @click="authStore.signOut">
+              <Icon name="tabler:logout" />
+              Sign Out
+            </a>
+          </li>
+        </template>
+      </AppDropdown>
     </div>
   </div>
 </template>

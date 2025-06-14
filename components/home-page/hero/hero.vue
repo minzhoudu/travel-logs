@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const authStore = useAuthStore();
+</script>
+
 <template>
   <div class="hero bg-base-300 container mt-4">
     <div class="hero-content text-center min-h-96">
@@ -9,7 +13,7 @@
           Travel log application to keep track of your travels and adventures around the world.
         </p>
 
-        <AppSignInButton label="Sign In with GitHub" />
+        <AppSignInButton v-if="!authStore.user" label="Sign In with GitHub" />
       </div>
     </div>
   </div>
