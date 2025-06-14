@@ -24,7 +24,7 @@ const authStore = useAuthStore();
         <template #default>
           <li>
             <a @click="authStore.signOut">
-              <Icon name="tabler:logout" />
+              <Icon name="tabler:logout" size="16" />
               Sign Out
             </a>
           </li>
