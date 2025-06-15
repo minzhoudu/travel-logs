@@ -13,7 +13,7 @@ defineProps({
 </script>
 
 <template>
-  <div :class="{ tooltip: showTooltip, [`tooltip-${placement}`]: showTooltip }" :data-tip="showTooltip ? text : undefined">
+  <div :class="{ tooltip: showTooltip, [`tooltip-${placement}`]: placement }" :data-tip="showTooltip ? text : undefined">
     <slot />
   </div>
 </template>
