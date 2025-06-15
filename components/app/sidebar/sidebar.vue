@@ -29,15 +29,35 @@ onMounted(() => {
     </div>
 
     <div class="flex flex-col gap-1">
-      <AppSidebarButton href="/dashboard" icon="tabler:home" label="Dashboard" :show-label="isOpen" />
+      <AppSidebarButton
+        href="/dashboard"
+        icon="tabler:home"
+        label="Dashboard"
+        :show-label="isOpen"
+      />
 
-      <AppSidebarButton href="/dashboard/locations" icon="tabler:map" label="Locations" :show-label="isOpen" />
+      <AppSidebarButton
+        href="/dashboard/locations"
+        icon="tabler:map"
+        label="Locations"
+        :show-label="isOpen"
+      />
 
-      <AppSidebarButton href="/dashboard/add-location" icon="tabler:circle-plus-filled" label="Add Location" :show-label="isOpen" />
+      <AppSidebarButton
+        href="/dashboard/locations/add"
+        icon="tabler:circle-plus-filled"
+        label="Add Location"
+        :show-label="isOpen"
+      />
 
       <div class="divider my-2" />
 
-      <AppSidebarButton href="/dashboard/settings" icon="tabler:settings" label="Settings" :show-label="isOpen" />
+      <AppSidebarButton
+        href="/dashboard/settings"
+        icon="tabler:settings"
+        label="Settings"
+        :show-label="isOpen"
+      />
     </div>
   </div>
 </template>
