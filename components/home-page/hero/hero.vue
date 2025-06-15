@@ -14,6 +14,10 @@ const authStore = useAuthStore();
         </p>
 
         <AppSignInButton v-if="!authStore.user" label="Sign In with GitHub" />
+
+        <NuxtLink v-if="authStore.user" to="/dashboard" class="btn btn-primary">
+          Go to Dashboard
+        </NuxtLink>
       </div>
     </div>
   </div>
