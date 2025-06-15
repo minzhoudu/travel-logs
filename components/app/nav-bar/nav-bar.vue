@@ -23,6 +23,12 @@ const authStore = useAuthStore();
 
         <template #default>
           <li>
+            <NuxtLink to="/dashboard">
+              <Icon name="tabler:dashboard" size="16" />
+              Dashboard
+            </NuxtLink>
+          </li>
+          <li>
             <a @click="authStore.signOut">
               <Icon name="tabler:logout" size="16" />
               Sign Out
